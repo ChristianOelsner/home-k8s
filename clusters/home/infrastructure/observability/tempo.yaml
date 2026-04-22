@@ -16,12 +16,14 @@ spec:
         name: grafana
         namespace: flux-system
   values:
-    replicas: 1
-  
+    tempo:
+      enabled: true
+
     persistence:
       enabled: true
-      storageClass: nfs-client
-  
+      storageClass: nfs-client   
+    replicas: 1
+
     resources:
       requests:
         cpu: 100m
