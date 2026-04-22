@@ -19,6 +19,19 @@ spec:
 
   values:
     deploymentMode: SingleBinary
+
+    loki:
+      auth_enabled: false
+  
+      storage:
+        type: filesystem
+        bucketNames:
+          chunks: chunks
+          ruler: ruler
+          admin: admin
+  
+      commonConfig:
+        replication_factor: 1
   
     singleBinary:
       replicas: 1
@@ -27,18 +40,9 @@ spec:
         storageClass: nfs-client
         size: 10Gi
   
-    loki:
-      auth_enabled: false
-  
-    # CRITICAL: explicitly disable scalable mode
     read:
       replicas: 0
     write:
       replicas: 0
     backend:
       replicas: 0
-  
-    # CRITICAL: override storage completely
-    storage:
-      type: filesystem
-      filesystem: {}
