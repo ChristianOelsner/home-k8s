@@ -15,3 +15,23 @@ spec:
         kind: HelmRepository
         name: grafana
         namespace: flux-system
+  values:
+    datasources:
+      datasources.yaml:
+        apiVersion: 1
+        datasources:
+          - name: Prometheus
+            type: prometheus
+            url: http://prometheus-operated.observability.svc:9090
+            access: proxy
+            isDefault: true
+
+          - name: Loki
+            type: loki
+            url: http://loki.observability.svc:3100
+            access: proxy
+
+          - name: Tempo
+            type: tempo
+            url: http://tempo.observability.svc:3200
+            access: proxy

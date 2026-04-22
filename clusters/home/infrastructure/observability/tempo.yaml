@@ -15,3 +15,14 @@ spec:
         kind: HelmRepository
         name: grafana
         namespace: flux-system
+  values:
+    replicas: 1
+  
+    persistence:
+      enabled: true
+      storageClass: nfs-client
+  
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
