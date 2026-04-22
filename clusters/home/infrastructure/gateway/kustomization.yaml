@@ -4,3 +4,4 @@ resources:
   - gateway.yaml
   - grafana-route.yaml
   - prometheus-route.yaml
+  - certificate.yaml
