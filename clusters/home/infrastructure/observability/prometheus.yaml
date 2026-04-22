@@ -18,18 +18,20 @@ spec:
   values:
   kubeControllerManager:
     enabled: false
-    service:
-      enabled: false
 
   kubeScheduler:
     enabled: false
-    service:
-      enabled: false
 
   kubeProxy:
     enabled: false
 
   kubeEtcd:
     enabled: false
-    service:
-      enabled: false
+
+  defaultRules:
+    create: true
+    rules:
+      kubeControllerManager: false
+      kubeScheduler: false
+      kubeProxy: false
+      kubeEtcd: false
