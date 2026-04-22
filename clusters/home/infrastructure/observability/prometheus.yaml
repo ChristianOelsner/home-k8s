@@ -16,14 +16,20 @@ spec:
         name: prometheus-community
         namespace: flux-system
   values:
-    kubeControllerManager:
+  kubeControllerManager:
+    enabled: false
+    service:
+      enabled: false
+
+  kubeScheduler:
+    enabled: false
+    service:
+      enabled: false
+
+  kubeProxy:
     enabled: false
 
-    kubeScheduler:
-      enabled: false
-  
-    kubeProxy:
-      enabled: false
-  
-    kubeEtcd:
+  kubeEtcd:
+    enabled: false
+    service:
       enabled: false
