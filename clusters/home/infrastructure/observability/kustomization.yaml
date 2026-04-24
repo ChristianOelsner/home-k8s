@@ -7,3 +7,5 @@ resources:
   - loki.yaml
   - promtail.yaml
   - tempo.yaml
+  - otel-collector.yaml
+  - helmrepository-otel.yaml
