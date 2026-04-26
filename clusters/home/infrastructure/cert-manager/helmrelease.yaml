@@ -11,9 +11,11 @@ spec:
     createNamespace: true
     remediation:
       retries: 3
+    crds: Create
   upgrade:
     remediation:
       retries: 3
+    crds: CreateReplace
   chart:
     spec:
       chart: cert-manager
