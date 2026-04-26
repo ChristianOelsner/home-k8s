@@ -10,3 +10,4 @@ resources:
   - tempo.yaml
   #- otel-collector.yaml
   - helmrepository-otel.yaml
+  - helmrelease.yaml
