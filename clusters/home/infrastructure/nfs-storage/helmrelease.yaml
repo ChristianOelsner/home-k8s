@@ -20,7 +20,7 @@ spec:
       path: /volume2/nfs   # IMPORTANT: must start with /
 
     storageClass:
-      name: nfs
+      name: nfs-client
       defaultClass: true
       reclaimPolicy: Retain
       archiveOnDelete: true
