@@ -7,6 +7,8 @@ spec:
   releaseName: tempo
   targetNamespace: observability
   interval: 5m
+  install:
+    createNamespace: true
   chart:
     spec:
       chart: tempo

@@ -8,6 +8,8 @@ spec:
   releaseName: loki
   targetNamespace: observability
   interval: 5m
+  install:
+    createNamespace: true
 
   chart:
     spec:
