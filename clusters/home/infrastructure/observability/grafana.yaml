@@ -7,6 +7,9 @@ spec:
   releaseName: grafana
   targetNamespace: observability
   interval: 5m
+  install:
+    createNamespace: true
+
   chart:
     spec:
       chart: grafana

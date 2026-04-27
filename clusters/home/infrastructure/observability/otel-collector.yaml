@@ -7,6 +7,8 @@ spec:
   releaseName: otel-collector
   targetNamespace: observability
   interval: 5m
+  install:
+    createNamespace: true
 
   chart:
     spec:

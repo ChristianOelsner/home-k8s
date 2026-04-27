@@ -3,11 +3,10 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - helmrepository.yaml
-  #- prometheus.yaml
-  #- grafana.yaml
+  - prometheus.yaml
+  - grafana.yaml
   - loki.yaml
-  #- promtail.yaml
+  - promtail.yaml
   - tempo.yaml
-  #- otel-collector.yaml
+  - otel-collector.yaml
   - helmrepository-otel.yaml
-  #- helmrelease.yaml

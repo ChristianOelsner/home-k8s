@@ -7,6 +7,9 @@ spec:
   releaseName: prometheus
   targetNamespace: observability
   interval: 5m
+  install:
+    createNamespace: true
+
   chart:
     spec:
       chart: kube-prometheus-stack
