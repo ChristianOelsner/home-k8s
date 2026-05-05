@@ -1,0 +1,30 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: longhorn-postgresql
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+provisioner: driver.longhorn.io
+allowVolumeExpansion: true
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+parameters:
+  # Number of replicas for PostgreSQL data
+  numberOfReplicas: "2"
+  
+  # Data locality - prefer local access for better performance
+  dataLocality: "best-effort"
+  
+  # Filesystem type optimized for databases
+  fsType: "ext4"
+  
+  # Disable compression for database workloads (better performance)
+  # encrypted: "false"  # Enable if you need encryption
+  
+  # Backup settings
+  recurringJobSelector: '[{"name":"postgresql-backup", "isGroup":false}]'
+  
+  # Performance settings for database workloads
+  # These ensure consistent performance for PostgreSQL
+  diskSelector: ""
+  nodeSelector: ""
