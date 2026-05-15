@@ -21,10 +21,10 @@ parameters:
   # Disable compression for database workloads (better performance)
   # encrypted: "false"  # Enable if you need encryption
   
-  # Backup settings
-  recurringJobSelector: '[{"name":"postgresql-backup", "isGroup":false}]'
+  # Backup settings - commented out until backup job is created
+  # recurringJobSelector: '[{"name":"postgresql-backup", "isGroup":false}]'
   
   # Performance settings for database workloads
   # These ensure consistent performance for PostgreSQL
-  diskSelector: ""
-  nodeSelector: ""
+  # diskSelector: ""  # Remove empty selectors
+  # nodeSelector: ""  # Remove empty selectors
